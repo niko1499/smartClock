@@ -109,7 +109,7 @@ void initializationTest()
 		fflush(stdout);
 	}
 
-	clear595();
+	//clear595();
 	printf ("\n");
 }
 
@@ -187,6 +187,7 @@ void writeSegment(int x)
 
 void writeDigit(int dig, int num)
 {
+	clear595();
 
 	int shiftSize = dig * 8;
 
@@ -481,7 +482,7 @@ void clear595()
 {
 	for(int i = 0; i < 31; ++i)
 	{
-		//     digitalWrite (100 + i, 0);
+	     digitalWrite (100 + i, 0);
 	}
 
 }
