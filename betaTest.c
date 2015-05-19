@@ -48,6 +48,8 @@ int main (void)
 	for(;;)
 	{
 		getTime();
+		clear595();
+		clear595();
 		for(int x=0;x <4; ++x)
 		{
 			writeDigit(x,input[x]);
@@ -187,14 +189,12 @@ void writeSegment(int x)
 
 void writeDigit(int dig, int num)
 {
-	clear595();
 
 	int shiftSize = dig * 8;
 
 	switch(num)
 	{
 		case 0:
-			/
 			if(dig==0)
 			{
 				digitalWrite(100 + shiftSize,0);
@@ -207,6 +207,7 @@ void writeDigit(int dig, int num)
 
 			}
 			if(dig !=0)
+
 			{
 				digitalWrite(100 + shiftSize,1);
 				digitalWrite(101 + shiftSize,1);
@@ -215,6 +216,7 @@ void writeDigit(int dig, int num)
 				digitalWrite(104 + shiftSize,1);
 				digitalWrite(105 + shiftSize,1);
 				digitalWrite(106 + shiftSize,0);
+				printf("Printing %d @ %d\n", num, dig);
 			}
 			break;
 
@@ -226,6 +228,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,0);
 			digitalWrite(105 + shiftSize,0);
 			digitalWrite(106 + shiftSize,0);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 2:
@@ -236,6 +239,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,1);
 			digitalWrite(105 + shiftSize,0);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 3:
@@ -246,6 +250,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,0);
 			digitalWrite(105 + shiftSize,0);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 4:
@@ -256,6 +261,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,0);
 			digitalWrite(105 + shiftSize,1);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 5:
@@ -266,6 +272,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,0);
 			digitalWrite(105 + shiftSize,1);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 6:
@@ -276,6 +283,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,1);
 			digitalWrite(105 + shiftSize,1);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 7:
@@ -286,6 +294,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,0);
 			digitalWrite(105 + shiftSize,0);
 			digitalWrite(106 + shiftSize,0);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 8:
@@ -296,6 +305,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,1);
 			digitalWrite(105 + shiftSize,1);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		case 9:
@@ -306,6 +316,7 @@ void writeDigit(int dig, int num)
 			digitalWrite(104 + shiftSize,0);
 			digitalWrite(105 + shiftSize,1);
 			digitalWrite(106 + shiftSize,1);
+			printf("Printing %d @ %d\n", num, dig);
 			break;
 
 		default:
