@@ -194,27 +194,27 @@ void writeDigit(int dig, int num)
 	switch(num)
 	{
 		case 0:
-		/
-	if(digi==0)
+			/
+			if(dig==0)
 			{
-                        digitalWrite(100 + shiftSize,0);
-                        digitalWrite(101 + shiftSize,0);
-                        digitalWrite(102 + shiftSize,0);
-                        digitalWrite(103 + shiftSize,0);
-                        digitalWrite(104 + shiftSize,0);
-                        digitalWrite(105 + shiftSize,0);
-                        digitalWrite(106 + shiftSize,0);
+				digitalWrite(100 + shiftSize,0);
+				digitalWrite(101 + shiftSize,0);
+				digitalWrite(102 + shiftSize,0);
+				digitalWrite(103 + shiftSize,0);
+				digitalWrite(104 + shiftSize,0);
+				digitalWrite(105 + shiftSize,0);
+				digitalWrite(106 + shiftSize,0);
 
 			}
 			if(dig !=0)
 			{
-			digitalWrite(100 + shiftSize,1);
-			digitalWrite(101 + shiftSize,1);
-			digitalWrite(102 + shiftSize,1);
-			digitalWrite(103 + shiftSize,1);
-			digitalWrite(104 + shiftSize,1);
-			digitalWrite(105 + shiftSize,1);
-			digitalWrite(106 + shiftSize,0);
+				digitalWrite(100 + shiftSize,1);
+				digitalWrite(101 + shiftSize,1);
+				digitalWrite(102 + shiftSize,1);
+				digitalWrite(103 + shiftSize,1);
+				digitalWrite(104 + shiftSize,1);
+				digitalWrite(105 + shiftSize,1);
+				digitalWrite(106 + shiftSize,0);
 			}
 			break;
 
@@ -482,7 +482,7 @@ void clear595()
 {
 	for(int i = 0; i < 31; ++i)
 	{
-	     digitalWrite (100 + i, 0);
+		digitalWrite (100 + i, 0);
 	}
 
 }
